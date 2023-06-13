@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #374259;
+    --cor-secundaria: #F2D8D8;
+    --cor-terciaria: #5C8984;
+    --cor-hover: #545B77;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* { /* adicionar ambos para resetar ambas as características */
+    padding: 0; 
+    margin: 0;
+}
+
+body {
+    /* height: 100vh;  faz com que a altura da página completa seja de 100% da pagina */
+    box-sizing: border-box; /* faz com que o elemento filho não sobressaia de tamanho do elemento pai */ 
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    text-decoration: none; 
+}
+
+.apresentacao {
+    padding: 3% 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 82px;
+}
+.apresentacao__conteudo {
+    width: 50%;
+    height: 482px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo__destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__paragrafo {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    text-align: center; /* alinha apenas o texto */
+    border-radius: 8px; /* arredondamento da borda do botão */
+    font-size: 1.5rem;
+    padding: 21.5px 0; /* primeiro valor é do eixo vertical, segundo do horizontal */
+    text-decoration: none; /* retira o sublinhado dos botões */
+    color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-secundaria);
+    color: black;
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.rodape {
+    color: black;
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+}
